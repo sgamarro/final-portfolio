@@ -1,0 +1,26 @@
+{
+  "name": "final-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgamarro/final-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sgamarro/final-portfolio/issues"
+  },
+  "homepage": "https://github.com/sgamarro/final-portfolio#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemailer": "^6.7.6",
+    "nodemon": "^2.0.18"
+  }
+}
