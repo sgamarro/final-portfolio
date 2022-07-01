@@ -12,12 +12,75 @@
 :root{
 --font-Noto: 'Noto Serif', serif;
 --font-Playball : 'Playball', cursive;
---primary-color: ;
---secondary-color: ;
---terceary-color: ;
+--primary-color: #000505 ;
+--secondary-color: #fefefa;
+--terceary-color: #ff3a28;
 
 }
 
 body{
     font-family: var(--font-Noto);
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    
+
+}
+.header-title{
+    font-size: 1.25rem;
+    margin: 1rem;
+    font-family: var(--font-Playball);
+}
+.header-title::after{
+    content: "";
+    display: block;
+    background-color: var(--terceary-color);
+    height: 0.1rem;
+    width: 12rem;
+    margin: 0.1rem;
+    animation: grow-bar 500ms ease-in;
+    transform-origin: left;
+}
+
+@keyframes grow-bar {
+    0%{
+        transform: scaleX(0);
+       
+    }
+    100%{
+        transform: scaleX(1);
+        
+    }
+}
+
+.navigation-components{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right:0;
+    display: none;
+    background-color: rgba(0,0,0, 0.8);
+    
+}
+
+nav ul li{
+    list-style: none;
+    text-align: center;
+    margin: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: inherit;
 }
