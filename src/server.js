@@ -6,7 +6,12 @@ const nodemailer = require('nodemailer');
 const PORT = process.env.PORT  || 5000;
 app.use(express.urlencoded({ extended: false}))
 app.use(express.json());
+
+
 app.use("/", express.static(path.join(__dirname, '../public')));
+app.use('/message', express.static(path.join(__dirname, '../public/message.html')));
+
+
 
 app.post('/send', function (req,res){
     var transporter = nodemailer.createTransport({
@@ -34,7 +39,7 @@ app.post('/send', function (req,res){
             console.log(error);
         }else{
             console.log('message was sent');
-            res.redirect('/')
+            res.redirect('/message')
         }
     })
 
@@ -44,5 +49,4 @@ app.post('/send', function (req,res){
 
 app.listen(PORT, ()=>{
     console.log("Server is working on port" + PORT)
- 
 })

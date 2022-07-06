@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    background-color: black;
+    line-height: 1rem;
+}
+
+p{
+    font-size: 1.2rem;
+}
+a{
+    background-color: #ff3a28;
+    padding: 0.7rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+
+}
+
