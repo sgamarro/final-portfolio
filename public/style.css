@@ -298,12 +298,35 @@ form{
     text-align: left;
 }
 form input{
+    background-color: transparent;
+    border: none;
+    border-bottom: var(--secondary-color) 0.1rem solid;
     margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+form input::placeholder{
+    color: var(--secondary-color);
+    font-family: inherit;
 }
 
 form input:focus{
     outline: none;
+}
+
+form textarea{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 0.1rem var(--secondary-color) solid;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+form textarea::placeholder{
+    color: var(--secondary-color);
+    font-family: inherit;
 }
 
 form input[type='submit']{
