@@ -13,31 +13,33 @@
 <body>
     <header>
 
-        <h1 class="header-title">Sebastian Gamarro</h1>
+        <h1 class="header-title"><a href="#about-me-section">Sebastian Gamarro</a></h1>
 
         <div class="page-navigation">
             <button id="nav-button"><i class="fa-solid fa-bars"></i></button>
-            <div class="navigation-components">
+            <div id="navigation" class="navigation-components ">
                 <nav>
                     <ul>
-                        <li><a href="#">Skills</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#about-me-section"  class="smooth-scroll">Home</a></li>
+                        <li><a href="#skills-section"  class="smooth-scroll">Skills</a></li>
+                        <li><a href="#project-section"  class="smooth-scroll">Projects</a></li>
+                        <li><a href="#contact-section"  class="smooth-scroll">Contact</a></li>
+                        <li><button id="close-nav"><i class="fa-solid fa-xmark"></i></button></li>
                     </ul>
                 </nav>
-                <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-                </div>
             </div>
         </div>
-
+        
     </header>
+    <div class="social-links-widgets">
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+    </div>
     <main>
         <section id="about-me-section">
             <img src="images/PSX_20220321_220952.jpg" alt="Profile photo">
             <div class="about-tag">
-                <h1>Sebastian Gamarro</h1>
+                <h1>Hi, I'm Sebastian </h1>
                 <span>Web Developer</span>
             </div>
             <p>
@@ -46,70 +48,70 @@
                 not what I would like for me, desing has been part of my life and it interest me to try new to try new
                 things, such as coding and desingning websites.
             </p>
-            
+
         </section>
         <section id="skills-section">
             <h3>Skills</h3>
             <div class="skills-len-logos">
-            <div class="lenguage-info">
-                <img src="images/html_logo.png" alt="html logo">
-                <span class="logo-tag">HTML</span>
-            </div>
-            <div class="lenguage-info">
-                <img src="images/CSS3_logo.svg.png" alt="css logo">
-                <span class="logo-tag">CSS</span>
-            </div>
-            <div class="lenguage-info">
-                <img src="images/javascript-logo.png" alt="js-logo">
-                <span class="logo-tag">Javascript</span>
-            </div>
-            <div class="lenguage-info">
-                <img src="images/Bootstrap_logo.svg.png" alt="bootstrap logo">
-                <span class="logo-tag">Bootstrap</span>
-            </div>
-            <div class="lenguage-info">
-                <img src="images/nodejs-logo-FBE122E377-seeklogo.com.png" alt="nodejs-logo">
-                <span class="logo-tag">Node JS</span>
-            </div>
-            <div class="lenguage-info">
-            <img src="images/React-icon.svg.png" alt="react logo">
-            <span class="logo-tag">React JS</span>
-            </div>
-            <div class="lenguage-info">
-                <img src="images/java-logo-7F8B35BAB3-seeklogo.com.png" alt="java logo">
-                <span class="logo-tag">Java</span>
-            </div>
+                <div class="lenguage-info">
+                    <img src="images/html_logo.png" alt="html logo">
+                    <span class="logo-tag">HTML</span>
+                </div>
+                <div class="lenguage-info">
+                    <img src="images/CSS3_logo.svg.png" alt="css logo">
+                    <span class="logo-tag">CSS</span>
+                </div>
+                <div class="lenguage-info">
+                    <img src="images/javascript-logo.png" alt="js-logo">
+                    <span class="logo-tag">Javascript</span>
+                </div>
+                <div class="lenguage-info">
+                    <img src="images/Bootstrap_logo.svg.png" alt="bootstrap logo">
+                    <span class="logo-tag">Bootstrap</span>
+                </div>
+                <div class="lenguage-info">
+                    <img src="images/nodejs-logo-FBE122E377-seeklogo.com.png" alt="nodejs-logo">
+                    <span class="logo-tag">Node JS</span>
+                </div>
+                <div class="lenguage-info">
+                    <img src="images/React-icon.svg.png" alt="react logo">
+                    <span class="logo-tag">React JS</span>
+                </div>
+                <div class="lenguage-info">
+                    <img src="images/java-logo-7F8B35BAB3-seeklogo.com.png" alt="java logo">
+                    <span class="logo-tag">Java</span>
+                </div>
             </div>
         </section>
         <section id="project-section">
 
             <h3>Projects</h3>
-
-            <div class="project-info-card">
-                <h2>Colorado Shoot</h2>
-                <img src="images/project1.jpg" alt="project-image">
-                <div class="project-links">
-                    <a href="#">Github</a>
-                    <a href="#">Link</a>
+            <div class="projects-container">
+                <div class="project-info-card">
+                    <h2>Colorado Shoot</h2>
+                    <img src="images/project1.jpg" alt="project-image">
+                    <div class="project-links">
+                        <a href="#">Github</a>
+                        <a href="#">Link</a>
+                    </div>
+                </div>
+                <div class="project-info-card">
+                    <h2>Capture the Moments</h2>
+                    <img src="images/capturethemoments.png" alt="project-image">
+                    <div class="project-links">
+                        <a href="#">Github</a>
+                        <a href="#">Link</a>
+                    </div>
+                </div>
+                <div class="project-info-card">
+                    <h2>Makg Entertainment</h2>
+                    <img src="images/makg.png" alt="project-image">
+                    <div class="project-links">
+                        <a href="#">Github</a>
+                        <a href="#">Link</a>
+                    </div>
                 </div>
             </div>
-            <div class="project-info-card">
-                <h2>Capture the Moments</h2>
-                <img src="images/capturethemoments.png" alt="project-image">
-                <div class="project-links">
-                    <a href="#">Github</a>
-                    <a href="#">Link</a>
-                </div>
-            </div>
-            <div class="project-info-card">
-                <h2>Makg Entertainment</h2>
-                <img src="images/makg.png" alt="project-image">
-                <div class="project-links">
-                    <a href="#">Github</a>
-                    <a href="#">Link</a>
-                </div>
-            </div>
-
 
         </section>
         <section id="contact-section">
@@ -121,7 +123,7 @@
                 <input type="email">
                 <label for="message">Message</label>
                 <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                <button>Submit</button>
+                <input type="submit">
             </form>
         </section>
 

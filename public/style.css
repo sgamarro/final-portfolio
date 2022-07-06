@@ -36,10 +36,15 @@ header {
     position: fixed;
 
 }
-.header-title{
+.header-title {
     font-size: 1.25rem;
     margin: 1rem;
     font-family: var(--font-Playball);
+}
+
+.header-title a{
+    color: var(--secondary-color);
+    text-decoration: none;
 }
 .header-title::after{
     content: "";
@@ -82,29 +87,69 @@ header {
 }
 
 .navigation-components{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: none;
+   
+
+}
+
+.navigation-components.active{
+    display: block;
     position: absolute;
     top: 0;
-    right:0;
-    display: none;
-    background-color: rgba(0,0,0, 0.8);
-    
-}
-
-nav ul li{
-    list-style: none;
+    left: 0;
+    right: 0;
     text-align: center;
-    margin: 1rem;
+    z-index: 5;
+    background-color: var(--primary-color);
+    animation: activenav 600ms ease;
+  
 }
 
-nav ul li a {
+@keyframes activenav {
+    0%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(0rem);
+    }
+}
+
+
+ nav ul{
+    list-style: none;
+    margin-bottom: 1rem;
+    padding: 0;
+    text-align: center;  
+}
+
+ ul li {
+    margin-bottom: 1rem;
+}
+
+ nav ul li a {
     color: white;
     text-decoration: none;
     font-family: inherit;
+    
 }
+nav ul li a.active {
+    color: var(--terceary-color);
+}
+
+#close-nav{
+    background-color: transparent;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.fa-xmark{
+    color: var(--terceary-color);
+}
+
+.social-links-widgets{
+    display: none;
+}
+
 
 #about-me-section{
     background-color: var(--primary-color);
@@ -142,8 +187,9 @@ nav ul li a {
 #about-me-section p {
     text-align: center;
     font-size: 1rem;
-    max-width: 100ch;
+    max-width: 25rem;
     margin: 0 auto;
+
 }
 
 #skills-section{
@@ -192,9 +238,9 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    flex-wrap: wrap;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    margin: 0 auto;
 }
 
 #project-section h3{
@@ -203,10 +249,18 @@ nav ul li a {
     margin: 0 auto;
     text-align: center;
 }
-#project-section img{
+#project-section .project-info-card img{
     width: 16rem;
     height: 7rem;
     box-shadow: 3px 2px 7px rgba(0,0,0, 0.6);
+}
+
+.projects-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
 }
 .project-info-card{
     margin: 2rem;
@@ -248,7 +302,11 @@ form input{
     margin-bottom: 0.5rem;
 }
 
-form button{
+form input:focus{
+    outline: none;
+}
+
+form input[type='submit']{
     width: 5rem;
     margin: 0.4rem;
     background-color: var(--terceary-color);
@@ -271,3 +329,100 @@ footer .social-icons a{
     color: rgb(121, 121, 121);
     margin: 0.5rem;
 }
+
+@media (min-width: 806px ){
+    
+    h3{
+        font-size: 1.8rem;
+    }
+    .header-title{
+        font-size: 1.5rem;
+    }
+    .header-title::after{
+        width: 15rem;
+    }
+    .navigation-components{
+        display: block;
+        background-color: transparent;
+        margin-right: 1.5rem;
+    }
+
+ 
+    .navigation-components ul  {
+        display: flex;
+        flex-direction: row;
+      
+    }
+    .navigation-components ul li {
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .navigation-components ul li{
+        margin-right: 1rem;
+    }
+
+    .navigation-components ul li a:hover{
+        color: var(--terceary-color);
+    }
+
+    #close-nav{
+        display: none;
+    }
+   
+
+     button .fa-bars{
+        display: none;
+    }
+
+    #project-section .project-info-card img{
+        width: 19rem;
+        height: 10rem;
+    }
+    
+    .social-links-widgets{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 100px;
+        right: 20px;
+    }
+
+    .social-links-widgets a{
+        color: rgb(121, 121, 121);
+        font-size: 1.8rem;
+        margin: 0.5rem;
+    }
+    .social-links-widgets a:hover .fa-linkedin-in{
+        color: rgb(0, 119, 181);
+    }
+    .social-links-widgets a:hover .fa-github{
+        color: #913399;
+    }
+
+    #about-me-section img{
+        width: 9rem;
+        height: 9rem;
+        border-radius: 50%;
+    
+    }
+    .about-tag{
+        line-height: 1rem;
+    }
+
+    .skills-len-logos{
+        padding: 4rem;
+    }
+  
+    form input{
+        width: 20rem;
+        padding: 0.4rem;
+    }
+
+    form input[type='submit']:hover{
+     background-color: var(--secondary-color);
+     color: var(--terceary-color);
+    }
+}
+    
