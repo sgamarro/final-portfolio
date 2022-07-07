@@ -192,6 +192,17 @@ nav ul li a.active {
 
 }
 
+#about-me-section a{
+    background-color: var(--terceary-color);
+    color: var(--secondary-color);
+    padding: 0.5rem;
+    margin: 2rem;
+    text-decoration: none;
+    font-family: inherit;
+    border-radius:12px ;
+
+}
+
 #skills-section{
     background-color: var(--secondary-color);
     display: flex;
